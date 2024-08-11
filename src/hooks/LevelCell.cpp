@@ -8,7 +8,6 @@ class $modify(ALLevelCell, LevelCell) {
         LevelCell::loadCustomLevelCell();
 
         if (!m_level) return;
-        log::info("levelcell");
         const auto difficultySpriteRaw = m_mainLayer->getChildByID("difficulty-container")->getChildByID("difficulty-sprite");
         if (!difficultySpriteRaw) return;
         const auto difficultySprite = static_cast<GJDifficultySprite*>(difficultySpriteRaw);

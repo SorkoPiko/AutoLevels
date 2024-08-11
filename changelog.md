@@ -1,5 +1,8 @@
 # Auto Levels Changelog
 
+## 1.0.2
+* Removed debugging.
+
 ## 1.0.1
 * Updated description.
 
