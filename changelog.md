@@ -1,4 +1,7 @@
-# Template Changelog
+# Auto Levels Changelog
+
+## 1.0.1
+* Updated description.
 
 ## 1.0.0
-* Edit this file to change your mod's changelog.
+* Initial Release - changes the difficulty of specific levels.
