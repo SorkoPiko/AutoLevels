@@ -8,7 +8,12 @@ class $modify(ALLevelCell, LevelCell) {
         LevelCell::loadCustomLevelCell();
 
         if (!m_level) return;
-        const auto difficultySpriteRaw = m_mainLayer->getChildByID("difficulty-container")->getChildByID("difficulty-sprite");
+        auto difficultyContainer= m_mainLayer->getChildByID("difficulty-container");
+        if (!difficultyContainer) {
+            difficultyContainer = m_mainLayer->getChildByID("grd-demon-icon-layer");
+        }
+        if (!difficultyContainer) return;
+        const auto difficultySpriteRaw = difficultyContainer->getChildByID("difficulty-sprite");
         if (!difficultySpriteRaw) return;
         const auto difficultySprite = static_cast<GJDifficultySprite*>(difficultySpriteRaw);
 

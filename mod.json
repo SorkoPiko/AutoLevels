@@ -1,5 +1,5 @@
 {
-	"geode": "3.4.0",
+	"geode": "3.7.1",
 	"gd": {
 		"win": "2.206",
 		"android": "2.206",
@@ -8,17 +8,24 @@
 	},
 	"id": "sorkopiko.autolevels",
 	"name": "Auto Levels",
-	"version": "v1.0.1",
+	"version": "v1.0.2",
 	"developer": "SorkoPiko",
 	"description": "Show misrated auto levels",
 	"links": {
 		"source": "https://github.com/SorkoPiko/AutoLevels",
 		"community": "https://discord.gg/8uPFxhxBX9"
 	},
+	"tags": [
+		"universal",
+		"online",
+		"enhancement",
+		"interface",
+		"utility"
+	],
 	"dependencies": [
 		{
 			"id": "geode.node-ids",
-			"version": ">=v1.13.1",
+			"version": ">=v1.14.1",
 			"importance": "required"
 		}
 	]
