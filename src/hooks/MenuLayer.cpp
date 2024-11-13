@@ -20,7 +20,7 @@ class $modify(ALMenuLayer, MenuLayer) {
                     return;
                 }
 
-                AutoLevels::setLevels(res->json().value().as<std::vector<int>>());
+                AutoLevels::setLevels(res->json().unwrapOrDefault().as<std::vector<int>>().unwrapOrDefault());
             } else if (e->isCancelled()) {
                 log::warn("Request Cancelled");
             }
