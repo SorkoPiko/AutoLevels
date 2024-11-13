@@ -1,5 +1,8 @@
 # Auto Levels Changelog
 
+## 1.0.3
+* Version bump
+
 ## 1.0.2
 * Removed debugging.
 * Fixed Grandpa Demon incompatibility.
