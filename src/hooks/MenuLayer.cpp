@@ -7,27 +7,22 @@ using namespace geode::prelude;
 class $modify(ALMenuLayer, MenuLayer) {
 
     struct Fields {
-        EventListener<web::WebTask> m_listener;
+        TaskHolder<web::WebResponse> m_listener;
     };
 
     bool init() {
         if (!MenuLayer::init()) return false;
 
-        m_fields->m_listener.bind([] (web::WebTask::Event* e) {
-            if (const auto res = e->getValue()) {
-                if (!res->ok()) {
+        m_fields->m_listener.spawn(
+            web::WebRequest().get("https://gist.githubusercontent.com/SorkoPiko/e34dc27750493641b75b92ce5bda2ebc/raw/autoLevels.json"),
+            [] (const web::WebResponse& e) {
+                if (!e.ok()) {
                     log::warn("Request Failed");
                     return;
                 }
 
-                AutoLevels::setLevels(res->json().unwrapOrDefault().as<std::vector<int>>().unwrapOrDefault());
-            } else if (e->isCancelled()) {
-                log::warn("Request Cancelled");
-            }
+                AutoLevels::setLevels(e.json().unwrapOrDefault().as<std::vector<int>>().unwrapOrDefault());
         });
-
-        auto req = web::WebRequest();
-        m_fields->m_listener.setFilter(req.get("https://secretway.sorkopiko.com/api/auto"));
 
         return true;
     }

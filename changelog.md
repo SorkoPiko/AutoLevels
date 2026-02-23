@@ -1,10 +1,13 @@
 # Auto Levels Changelog
 
+## 1.0.5
+* Updated for Geode 5.0.0.
+
 ## 1.0.4
-* Geode 4.0.1 compatibility
+* Geode 4.0.1 compatibility.
 
 ## 1.0.3
-* Version bump
+* Version bump.
 
 ## 1.0.2
 * Removed debugging.
