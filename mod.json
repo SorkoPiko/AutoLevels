@@ -22,11 +22,7 @@
 		"interface",
 		"utility"
 	],
-	"dependencies": [
-		{
-			"id": "geode.node-ids",
-			"version": ">=v1.23.0",
-			"importance": "required"
-		}
-	]
+	"dependencies": {
+		"geode.node-ids": ">=v1.23.0"
+	}
 }
